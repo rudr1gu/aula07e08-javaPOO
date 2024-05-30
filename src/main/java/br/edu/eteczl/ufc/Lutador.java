@@ -22,16 +22,17 @@ public class Lutador implements ILutador{
         this.setNumDerrota(0);
         this.setNumEmpates(0);
 
-        if(getPeso() >= 53f || getPeso() <=70.3f){
-            this.setCategoria("Peso Pena");
+        if(this.getPeso() < 52.2){
+            this.setCategoria("Inválido");
+        }else if(this.getPeso() <= 70.3){
+            this.setCategoria("Leve");
+        }else if(this.getPeso() <= 83.9){
+            this.setCategoria("Médio");
+        }else if(this.getPeso() <= 120.2){
+            this.setCategoria("Pesado");
+        }else{
+            this.setCategoria("Inválido");
         }
-        if(getPeso() >= 71f || getPeso() <=78f){
-            this.setCategoria("Peso Medio");
-        }
-        if(getPeso() >= 79f || getPeso() <= 100f){
-            this.setCategoria("Peso Pesado");
-        }
-
     }
 
 
